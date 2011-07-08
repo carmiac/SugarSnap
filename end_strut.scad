@@ -3,14 +3,14 @@ include <ss_parms.scad>
 
 libEcho=false;
 
-//end_strut();
+end_strut();
 
 module end_strut(){
 	difference(){
 		union(){
 			cube(size=[es_length, es_width, es_height]);
-			translate([0, 6.75, es_height/2]) mirror([1,0,0]) dovetail(height = es_height);
-			translate([es_length,  es_width- 6.75, es_height/2]) dovetail(height = es_height);
+			translate([0, 6.75, es_height/2]) mirror([1,0,0]) dovetail(height = es_height, male=true);
+			translate([es_length,  es_width- 6.75, es_height/2]) dovetail(height = es_height, male=true);
 		}
 		translate([es_length, 6.75, es_height/2]) mirror([1,0,0]) dovetail(male = false, height = 1.1* es_height);
 		translate([0,  es_width- 6.75, es_height/2]) dovetail(male = false, height = 1.1* es_height);

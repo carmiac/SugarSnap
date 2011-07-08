@@ -9,12 +9,18 @@ peg_width = bs_width / 4;
 module base_strut(){
 	difference(){
 		union(){
-			cube(size=[bs_length, bs_width, bs_height]);
-			translate([-1 * bv_width, 0, 0]) cube(size=[bv_width + 0.1, peg_width, bs_height]);
-			translate([-1 * bv_width, bs_width - peg_width , 0]) cube(size=[bv_width + 0.1, peg_width, bs_height]);
-			translate([0, (bs_width + bs_height) / 2, bs_height- 0.1])
-			rotate(forward(90))
-				a_triangle(30, 0.9 * bs_td_space, bs_height);
+			// body
+			translate([-bs_sink, 0, 0]) 
+				cube(size=[bs_length + bs_sink, bs_width, bs_height]);
+			// mounting pegs
+			translate([-1 * bv_width, 0, 0]) 
+				cube(size=[bv_width - bs_sink +0.1, peg_width, bs_height]);
+			translate([-1 * bv_width, bs_width - peg_width , 0]) 
+				cube(size=[bv_width - bs_sink + 0.1, peg_width, bs_height]);
+			// support cube
+			translate([-bs_sink, (bs_width-peg_width)  / 2, bs_height- 0.1])
+				cube(size=[bs_sink + 0.5 * bs_td_space, peg_width, bs_height]);
+
 		}
 		translate([bs_length, 6.75, bs_height/2]) mirror([1,0,0]) dovetail(male = false, height = 1.1* bs_height);
 		translate([bs_length,  bs_width - 6.75, bs_height/2]) mirror([1,0,0]) dovetail(male = false, height = 1.1* bs_height);

@@ -48,11 +48,14 @@ ys_rod_diameter = (3/8) * inch + 0.05; // outer diameter of the y-rod, plus some
 ys_rod_wall = 3;
 ys_rod_length = 15;
 
-/*** Base Struts ***/
+/*** Y Motor Strut Struts ***/
 ym_length = 100; // strut body length
 ym_width = 30;	// strut body width
 ym_height = 10; // strut body thickness
 
 /*** Bottom Vertex ***/
 bv_width = es_height; // vertex thickness
-bv_radius = 30; // radius of the vertex
+bv_radius = 31; // radius of the vertex
+bs_sink = es_height/3; // how far to countersink the y supporting base struts into the vertex
+bs_outset = 10; // outset of the y supporting base struts from the center of the vertex
+bv_tolerance = 0.25; // shrinkage interference tolerence for the holes
