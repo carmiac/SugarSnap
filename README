@@ -1,3 +1,10 @@
 SugarSnap Mendel
 
 This is a  Mendel like RepRap inspired by Vik Olliver's nutless Mendel and Snapdragon, coded in OpenSCAD.  It is under initial development. 
+
+
+TODO:
+Idler Mounts
+Fix truss holes in end struts
+Fix truss holes in base struts
+Print and build... :D

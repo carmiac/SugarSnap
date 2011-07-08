@@ -59,3 +59,22 @@ bv_radius = 31; // radius of the vertex
 bs_sink = es_height/3; // how far to countersink the y supporting base struts into the vertex
 bs_outset = 10; // outset of the y supporting base struts from the center of the vertex
 bv_tolerance = 0.25; // shrinkage interference tolerence for the holes
+
+/*** Top Vertex ***/
+tv_rod_diameter = ys_rod_diameter; // outer diameter of the x-rod, plus some shrinkage
+tv_rod_wall = ys_rod_wall;
+tv_rod_length = ys_rod_length;
+tv_rod_spacing = 35; // space between the inside edges of the x-rods
+tv_rod_lift = 0; // center of x rods above center of vertex semi-circle
+tv_top_height = tv_rod_diameter/2 + tv_rod_wall + tv_rod_lift + 5; // vertex body height above bottom half circle
+tv_rod_sink = 5;
+
+/*** X Motor Mount ***/
+x_dt_space = 20; // spacing between the X motor mount dovetails
+
+
+
+
+
+
+
