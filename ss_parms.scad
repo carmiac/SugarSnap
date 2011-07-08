@@ -18,6 +18,8 @@
  *
 */
 
+include <mcad/units.scad>
+
 /*** End Struts ***/
 es_length = 80; // strut body length
 es_width = 30;	// strut body width
@@ -36,5 +38,21 @@ bs_td_radius = 9; // teardrop hole radius
 bs_num_td = 1;	// number of teardrops
 bs_td_space = 12; // space between teardrops 
 
+/*** Y Rod Support Struts ***/
+ys_length = 30; // strut body length
+ys_width = bs_width;	// strut body width
+ys_height = bs_height; // strut body thickness
+ys_foot = true;	// use a foot on the y rod support
+ys_foot_width = 8;	// foot width
+ys_rod_diameter = (3/8) * inch + 0.05; // outer diameter of the y-rod, plus some shrinkage
+ys_rod_wall = 3;
+ys_rod_length = 15;
+
+/*** Base Struts ***/
+ym_length = 100; // strut body length
+ym_width = 30;	// strut body width
+ym_height = 10; // strut body thickness
+
 /*** Bottom Vertex ***/
 bv_width = es_height; // vertex thickness
+bv_radius = 30; // radius of the vertex
