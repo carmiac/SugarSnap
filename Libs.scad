@@ -148,7 +148,7 @@ module slot(size=[4,10,1], startRound=true, endRound=true, centerXYZ=[1,0,0]){
 }	}
 
 module dovetail (width=9, height=10, male=true){
-	w= (male==true) ? width*0.975 : width;
+	w= (male==true) ? width*0.95 : width;
 	translate(slide(2.4)) union(){
 		rotate(tighten(30))
 			equilateralTriangle(w,height, center=true);

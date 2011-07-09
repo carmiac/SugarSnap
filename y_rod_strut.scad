@@ -5,7 +5,9 @@ libEcho=false;
 
 foot_length = bv_radius - ys_width/2;
 
-module y_strut(){
+y_rod_strut();
+
+module y_rod_strut(){
 		union(){
 			cube(size=[ys_length, ys_width, ys_height]);
 			translate([0, 6.75, ys_height/2]) mirror([1,0,0]) dovetail(male = true, height = ys_height);
@@ -23,4 +25,3 @@ module y_strut(){
 		}
 }
 
-y_strut();
