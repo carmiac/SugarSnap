@@ -7,10 +7,10 @@ libEcho = false;
 top_vertex();
 
 	
-module rod_mount(){
+module rod_mount(tol = 0.1){
 	difference(){
 		cylinder(r=tv_rod_diameter / 2 + tv_rod_wall, h=tv_rod_length+ 0.01, center=true, $fn=resolution(ys_rod_diameter));  
-		cylinder(r=tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));  
+		cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));  
 	}
 }
 
