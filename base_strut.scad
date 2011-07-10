@@ -22,8 +22,12 @@ module base_strut(){
 				cube(size=[bs_sink + 0.5 * bs_td_space, peg_width, bs_height]);
 
 		}
-		translate([bs_length, 6.75, bs_height/2]) mirror([1,0,0]) dovetail(male = false, height = 1.1* bs_height);
-		translate([bs_length,  bs_width - 6.75, bs_height/2]) mirror([1,0,0]) dovetail(male = false, height = 1.1* bs_height);
+		// female dovetails
+		translate([bs_length, 6.75, bs_height/2]) mirror([1,0,0]) 
+			dovetail(male = false, height = 1.1* bs_height);
+		translate([bs_length,  bs_width - 6.75, bs_height/2]) mirror([1,0,0]) 
+			dovetail(male = false, height = 1.1* bs_height);
+		// teardrop hole
 		if (bs_teardrops) {
 			for ( i = [0 : bs_num_td - 1 ]) {
 				translate([bs_td_space + bs_td_radius +  i * (2.5 * bs_td_radius + bs_td_space),  bs_width / 2, bs_height/2])
