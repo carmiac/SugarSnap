@@ -28,3 +28,10 @@ module bs_dummy(tol = bv_tolerance){
 			cube(size=[bs_sink + 0.5 * bs_td_space, peg_width+tol, bs_height+tol]);
 	}
 }
+
+module rod_mount(tol = 0.1){
+	difference(){
+		cylinder(r=tol + tv_rod_diameter / 2 + tv_rod_wall, h=tv_rod_length+ 0.01, center=true, $fn=resolution(ys_rod_diameter));  
+		cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));  
+	}
+}

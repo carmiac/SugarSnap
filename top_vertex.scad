@@ -6,13 +6,6 @@ libEcho = false;
 
 top_vertex();
 
-	
-module rod_mount(tol = 0.1){
-	difference(){
-		cylinder(r=tv_rod_diameter / 2 + tv_rod_wall, h=tv_rod_length+ 0.01, center=true, $fn=resolution(ys_rod_diameter));  
-		cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));  
-	}
-}
 
 module vertex_body(){
 	union(){
@@ -29,7 +22,7 @@ module vertex_body(){
 	}
 }
 
-module top_vertex(){
+module top_vertex(tol = tv_rod_tol){
 	union(){
 		difference(){
 			vertex_body();
@@ -42,9 +35,9 @@ module top_vertex(){
 					es_dummy();		
 			// X-Rod countersinks
 			translate([-tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - tv_rod_sink])
-				cylinder(r=tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));
+				cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));
 			translate([tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - tv_rod_sink])
-				cylinder(r=tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));
+				cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));
 				
 			// Motor Mount dovetails
 			translate([0,tv_top_height,-0.01])
@@ -70,9 +63,9 @@ module top_vertex(){
 					
 		// X Rod Mounts
 		translate([-tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - 0.1])
-			rod_mount();
+			rod_mount(tol);
 		translate([tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - 0.1])
-			rod_mount();
+			rod_mount(tol);
 	}
 }
 

@@ -47,6 +47,8 @@ ys_foot_width = 8;	// foot width
 ys_rod_diameter = (3/8) * inch + 0.05; // outer diameter of the y-rod, plus some shrinkage
 ys_rod_wall = 3;
 ys_rod_length = 15;
+ys_rod_tol = 0.1;
+ys_rod_sink = ys_height / 2; //rod countersink into the body 
 
 /*** Y Motor Strut Struts ***/
 ym_length = 100; // strut body length
@@ -67,7 +69,8 @@ tv_rod_length = ys_rod_length;
 tv_rod_spacing = 35; // space between the inside edges of the x-rods
 tv_rod_lift = 0; // center of x rods above center of vertex semi-circle
 tv_top_height = tv_rod_diameter/2 + tv_rod_wall + tv_rod_lift + 5; // vertex body height above bottom half circle
-tv_rod_sink = 5;
+tv_rod_sink = es_height/2;
+tv_rod_tol = ys_rod_tol;
 
 /*** X Motor Mount ***/
 x_dt_space = 20; // spacing between the X motor mount dovetails

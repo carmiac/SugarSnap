@@ -1,10 +1,13 @@
-use <Libs.scad>
 include <ss_parms.scad>
-use <top_vertex.scad>
+use <strut_dummies.scad>
 
 libEcho = false;
 
-preview = true;
+translate([-40,-5,0])
+	rod_test();
+
+
+preview = false;
 
 if (preview) 
 	ShowPegGrid(1.0);
@@ -18,17 +21,14 @@ module ShowPegGrid(Size) {
  
 }
 
-module bv_test(tol = 0.5){
+module rod_test(tol = 0.5){
 	union(){
-		difference(){
-			//main body
-			cube(size=[90, bs_width + 6, 3]);
-			// base strut mounting tests
-			for ( i = [0 : 4 ]) {
-				translate([(i+1) * (bv_width * 2 + 3), 3, bv_width]) 
-					rotate(a = [0,-90,0])
-						bs_dummy(tol = 0.15 * (i + 1));
-			}
+		//main body
+		cube(size=[80, ys_rod_diameter + ys_rod_wall + 6, 3]);
+		// base strut mounting tests
+		for ( i = [1 : 4 ]) {
+			translate([ -5 + i * (ys_rod_diameter + 2 *ys_rod_wall + 3), (ys_rod_diameter + ys_rod_wall + 6)/2, ys_rod_length/2 + 2.99]) 
+					rod_mount(tol = 0.15 * (i+1));
 		}
 	}
 }
