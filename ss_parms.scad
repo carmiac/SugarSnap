@@ -20,6 +20,11 @@
 
 include <mcad/units.scad>
 
+/*** Primary Configuration ***/
+rod_diameter = (3/8) * inch; // outer diamter of the smooth rods
+rod_length = 12 * inch; // length of the smooth rods
+rod_tol = 0.15; // tolerance added to rod holes for shrinkage
+
 /*** End Struts ***/
 es_length = 80; // strut body length
 es_width = 30;	// strut body width
@@ -44,10 +49,10 @@ ys_width = bs_width;	// strut body width
 ys_height = bs_height; // strut body thickness
 ys_foot = true;	// use a foot on the y rod support
 ys_foot_width = 8;	// foot width
-ys_rod_diameter = (3/8) * inch + 0.05; // outer diameter of the y-rod, plus some shrinkage
+ys_rod_diameter = rod_diameter; // outer diameter of the y-rod, plus some shrinkage
 ys_rod_wall = 3;
 ys_rod_length = 15;
-ys_rod_tol = 0.1;
+ys_rod_tol = rod_tol;
 ys_rod_sink = ys_height / 2; //rod countersink into the body 
 
 /*** Y Motor Strut Struts ***/
@@ -70,14 +75,21 @@ tv_rod_spacing = 35; // space between the inside edges of the x-rods
 tv_rod_lift = 0; // center of x rods above center of vertex semi-circle
 tv_top_height = tv_rod_diameter/2 + tv_rod_wall + tv_rod_lift + 5; // vertex body height above bottom half circle
 tv_rod_sink = es_height/2;
-tv_rod_tol = ys_rod_tol;
+tv_rod_tol = rod_tol;
 
 /*** X Motor Mount ***/
 x_dt_space = 20; // spacing between the X motor mount dovetails
 
-
-
-
+/*** Y Carriage ***/
+yc_width = ym_length + 2 * ys_length; // width (x direction) of the y carriage
+yc_length = 90; // length in the y direction of the y carriage
+yc_thick = 5; // thickness of the Y carriage frame pieces
+yc_frame_width = 25; // width of the Y carriage frame pieces
+yc_thickness = 5; // thickness of the Y carriage frame pieces
+yc_platform_mount_height = 5; // height of the build platform  mounts above the Y carriage
+yc_platform_mount_diameter = yc_frame_width; // diameter of the build platform mounts
+yc_magnet_diameter = 5; // diameter of the build platform mounting magnets
+yc_magnet_thickness = 3; // thickness of the build platform mounting magnets
 
 
 
