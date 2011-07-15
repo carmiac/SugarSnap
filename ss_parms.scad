@@ -24,6 +24,8 @@ include <mcad/units.scad>
 rod_diameter = 8; // outer diamter of the smooth rods
 rod_length = 350; // length of the smooth rods
 rod_tol = 0.15; // tolerance added to rod holes for shrinkage
+idler_pulley_radius = 15; // outer radius, including flange of the idler pulleys
+
 
 /*** End Struts ***/
 es_length = 80; // strut body length
@@ -58,7 +60,14 @@ ys_rod_sink = ys_height / 2; //rod countersink into the body
 /*** Y Motor Strut Struts ***/
 ym_length = 100; // strut body length
 ym_width = bs_width;	// strut body width
-ym_height = bs_height ; // strut body thickness
+ym_height = bs_height; // strut body thickness
+ym_mount_width = 5; // width of the motor mount
+
+/*** Y Idler Strut ***/
+yi_bolt = 8; // Y idler bolt
+yi_width = 10; // Y idler support width
+
+
 
 /*** Bottom Vertex ***/
 bv_width = es_height; // vertex thickness

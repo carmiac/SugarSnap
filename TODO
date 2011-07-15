@@ -1,14 +1,11 @@
 TODO:
-rotate Y motor mount sideways
-Y axis idler mount
+Check all lengths to make frame rods all M8/350mm long
 Z axis motor/lead screw mount
 Z axis idler side lead screw mount
 Z axis wobble arrestors (from ScribbleJ?)
 X axis motor mount / Z carriage
 X axis idler mount / Z carriage
 X axis extruder carriage (from Prusa?)
-Redo top vertex to be bottom vertex + height
-
+Redo top vertex to be bottom vertex + rotation
 PLA bushings (from Prusa?)
-Check all lengths to make frame rods all M8/350mm long
 Print and build... :D
