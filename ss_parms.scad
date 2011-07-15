@@ -21,8 +21,8 @@
 include <mcad/units.scad>
 
 /*** Primary Configuration ***/
-rod_diameter = (3/8) * inch; // outer diamter of the smooth rods
-rod_length = 12 * inch; // length of the smooth rods
+rod_diameter = 8; // outer diamter of the smooth rods
+rod_length = 350; // length of the smooth rods
 rod_tol = 0.15; // tolerance added to rod holes for shrinkage
 
 /*** End Struts ***/
@@ -90,6 +90,9 @@ yc_platform_mount_height = 5; // height of the build platform  mounts above the 
 yc_platform_mount_diameter = yc_frame_width; // diameter of the build platform mounts
 yc_magnet_diameter = 5; // diameter of the build platform mounting magnets
 yc_magnet_thickness = 3; // thickness of the build platform mounting magnets
-
-
+yc_clip_wall = 1; // wall thickness for the belt clip
+yc_clip_length = 10; // clamping length of the belt clip
+yc_belt_width = 5; // width of the y belt, plus some slack
+yc_belt_thickness = 2; // thickness of the y belt
+y_belt_outset = 15; // distance of inner side of belt from center
 

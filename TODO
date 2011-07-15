@@ -1,12 +1,14 @@
 TODO:
-Y axis carriage belt clips
+rotate Y motor mount sideways
 Y axis idler mount
 Z axis motor/lead screw mount
 Z axis idler side lead screw mount
-X axis motor carriage
-X axis idler carriage
+Z axis wobble arrestors (from ScribbleJ?)
+X axis motor mount / Z carriage
+X axis idler mount / Z carriage
 X axis extruder carriage (from Prusa?)
 Redo top vertex to be bottom vertex + height
+
 PLA bushings (from Prusa?)
-Check all lengths to make rods all 12 inches long (305mm)
+Check all lengths to make frame rods all M8/350mm long
 Print and build... :D
