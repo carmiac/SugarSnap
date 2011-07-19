@@ -1,12 +1,15 @@
 TODO:
-Check all lengths to make frame rods all M8/350mm long
-Redo top vertex to be bottom vertex + rotation
-Z axis smooth rod top mounts
-***Frame printing can start after the top rod mounts***
+***Print Frame***
+add thing doc to all parts
+create page on reprap.org
+create ToM and Reprap build plates
 
-Z axis wobble arrestors (from ScribbleJ?)
+**Parts to design**
 X axis motor mount / Z carriage
 X axis idler mount / Z carriage
+Z axis wobble arrestors (from ScribbleJ?)
 X axis extruder carriage (from Prusa?)
 PLA bushings (from Prusa?)
-Print and build... :D
+
+
+

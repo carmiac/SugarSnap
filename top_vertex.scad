@@ -14,7 +14,7 @@ module vertex_body(){
 			translate([0,0, es_height/2])
 				cylinder(r = bv_radius, h = es_height, center = true);
 			translate([-1.25 * bv_radius, 0.1, -1])
-				cube([bv_radius * 2.5, bv_radius * 2.5, es_height * 2]);
+				cube([bv_radius * 2.5, bv_radius +2, es_height * 2]);
 			}
 		// top half of vertex
 		translate([-bv_radius, 0, 0])
@@ -22,7 +22,7 @@ module vertex_body(){
 	}
 }
 
-module top_vertex(tol = tv_rod_tol){
+module top_vertex(){
 	union(){
 		difference(){
 			vertex_body();
@@ -33,22 +33,20 @@ module top_vertex(tol = tv_rod_tol){
 			rotate(a = [0,0,120])
 				translate([-es_length - (sqrt(pow(bv_radius,2) - pow(es_width/2,2))),- es_width/2, -0.01])
 					es_dummy();		
-			// X-Rod countersinks
-			translate([-tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - tv_rod_sink])
-				cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));
-			translate([tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - tv_rod_sink])
-				cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));
 				
-			// Motor Mount dovetails
-			translate([0,tv_top_height,-0.01])
+			// Z Rod Mount dovetails
+			translate([-z_rod_mount_width/2 + 6.75, tv_top_height - z_rod_mount_thick/2, 0])
 				rotate(a = [0,-90,90])
-					dovetail(male = false, height = 5);
-			translate([x_dt_space,tv_top_height,-0.01])
+					dovetail(male = false, height = z_rod_mount_thick + 0.02);
+			translate([z_rod_mount_width/2 - 6.75, tv_top_height - z_rod_mount_thick/2, 0])
 				rotate(a = [0,-90,90])
-					dovetail(male = false, height = 5);
-			translate([-x_dt_space,tv_top_height,-0.01])
-				rotate(a = [0,-90,90])
-					dovetail(male = false, height = 5);
+					dovetail(male = false, height = z_rod_mount_thick + 0.02);
+					
+			// base strut mounting
+			rotate(a = [0,0,180])
+				translate([bs_height, -ts_lift-bs_width/2, bv_width]) 
+					rotate(a = [0,-90,0])
+						bs_dummy();
 		}
 			
 		// male dovetails
@@ -60,12 +58,6 @@ module top_vertex(tol = tv_rod_tol){
 			translate([- (sqrt(pow(bv_radius,2) - pow(es_width/2,2))),  -es_width/2 + 6.75, es_height/2]) 
 				mirror([1,0,0])
 					dovetail(male = true, height = es_height);
-					
-		// X Rod Mounts
-		translate([-tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - 0.1])
-			rod_mount(tol);
-		translate([tv_rod_spacing/2, tv_rod_lift, es_height + tv_rod_length/2 - 0.1])
-			rod_mount(tol);
 	}
 }
 

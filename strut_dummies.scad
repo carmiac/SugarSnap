@@ -31,7 +31,7 @@ module bs_dummy(tol = bv_tolerance){
 
 module rod_mount(tol = 0.1){
 	difference(){
-		cylinder(r=tol + tv_rod_diameter / 2 + tv_rod_wall, h=tv_rod_length+ 0.01, center=true, $fn=resolution(ys_rod_diameter));  
-		cylinder(r=tol + tv_rod_diameter / 2, h=tv_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));  
+		cylinder(r=tol + rod_diameter / 2 + rod_wall, h=ys_rod_length+ 0.01, center=true, $fn=resolution(ys_rod_diameter));  
+		cylinder(r=tol + rod_diameter / 2, h=ys_rod_length + 0.1, center=true, $fn=resolution(ys_rod_diameter));  
 	}
 }

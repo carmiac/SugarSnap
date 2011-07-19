@@ -21,7 +21,7 @@ module base_vertex(){
 			}
 			// base strut mounting
 			rotate(a = [0,0,180])
-				translate([-bs_outset + bs_height/2, -bs_width/2, bv_width]) 
+				translate([-bs_outset, -bs_width/2, bv_width]) 
 					rotate(a = [0,-90,0])
 						bs_dummy();
 		}

@@ -20,7 +20,7 @@ module z_rod_mount(){
 				cylinder(r=rod_tol + rod_diameter / 2 + rod_wall, h=rod_mount_length+ 5.01, center=true, $fn=resolution(rod_diameter));
 		}
 		// rod hole
-		translate([15, rod_tol + rod_diameter / 2 + rod_wall,-1])
+		translate([15, rod_tol + rod_diameter / 2 + rod_wall,z_rod_mount_thick])
 			cylinder(r=rod_tol + rod_diameter / 2, h=rod_mount_length+ z_rod_mount_thick+1, center=false, $fn=resolution(rod_diameter));
 	}
 }
