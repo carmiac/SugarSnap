@@ -1,11 +1,12 @@
 TODO:
 Check all lengths to make frame rods all M8/350mm long
-Z axis motor/lead screw mount
-Z axis idler side lead screw mount
+Redo top vertex to be bottom vertex + rotation
+Z axis smooth rod top mounts
+***Frame printing can start after the top rod mounts***
+
 Z axis wobble arrestors (from ScribbleJ?)
 X axis motor mount / Z carriage
 X axis idler mount / Z carriage
 X axis extruder carriage (from Prusa?)
-Redo top vertex to be bottom vertex + rotation
 PLA bushings (from Prusa?)
 Print and build... :D

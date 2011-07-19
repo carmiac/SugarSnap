@@ -24,14 +24,15 @@ include <mcad/units.scad>
 rod_diameter = 8; // outer diamter of the smooth rods
 rod_length = 350; // length of the smooth rods
 rod_tol = 0.15; // tolerance added to rod holes for shrinkage
+slot_tolerence = 0.45; // tolerence for slot connectors
 idler_pulley_radius = 15; // outer radius, including flange of the idler pulleys
-
+bearing_tol = rod_tol; // tolerence added to bearing pockets for shrinkage
 
 /*** End Struts ***/
 es_length = 80; // strut body length
 es_width = 30;	// strut body width
 es_height = 7; // strut body thickness
-es_teardrops = true; // include teardrop holes
+es_teardrops = false; // include teardrop holes
 es_td_radius = 9; // teardrop hole radius
 es_num_td = 2;	// number of teardrops
 es_td_space = 12; // space between teardrops 
@@ -74,7 +75,7 @@ bv_width = es_height; // vertex thickness
 bv_radius = 31; // radius of the vertex
 bs_sink = es_height/3; // how far to countersink the y supporting base struts into the vertex
 bs_outset = 10; // outset of the y supporting base struts from the center of the vertex
-bv_tolerance = 0.45; // shrinkage tolerence for the strut slots
+bv_tolerance = slot_tolerence; // shrinkage tolerence for the strut slots
 
 /*** Top Vertex ***/
 tv_rod_diameter = ys_rod_diameter; // outer diameter of the x-rod, plus some shrinkage
@@ -105,3 +106,19 @@ yc_belt_width = 5; // width of the y belt, plus some slack
 yc_belt_thickness = 2; // thickness of the y belt
 y_belt_outset = 15; // distance of inner side of belt from center
 
+/*** Z Motor Mount and Idler ***/
+
+z_bearing_diameter = 22; // 608 bearing
+z_bearing_width = 7; // 608 bearing
+z_pocket_wall = 5; // wall thickness for the bearing pockets
+z_rod_bore_diameter = 16; // 15 for the M8 nut, plus a little wiggle room
+z_motor_slide = 10; // length of adjustment slide for belt tension
+z_motor_mount_width = 1.7*inch; // wide enough for a NEMA 17
+z_idler_mount_width = z_bearing_diameter + z_pocket_wall * 2;
+z_mount_thick = 5; 
+z_motor_mount_length = 1.7 * inch + z_motor_slide + 5 + z_bearing_diameter + 10;
+z_idler_length = z_bearing_diameter + 10;
+z_mount_lift = 10; // bottom of the z mounts above the bottom of the end stuts
+
+/*** Z smooth rod mounts ***/
+z_rod_mount_width = 30;
