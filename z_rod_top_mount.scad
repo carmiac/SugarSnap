@@ -1,9 +1,9 @@
 use <Libs.scad>
 include <ss_parms.scad>
 
-z_rod_mount();
+z_rod_top_mount();
 
-module z_rod_mount(){
+module z_rod_top_mount(){
 	difference(){
 		union(){
 			// body

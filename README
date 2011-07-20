@@ -1,21 +1,21 @@
 SugarSnap Mendel
 
-This is a  Mendel like RepRap inspired by Vik Olliver's nutless Mendel and Snapdragon, coded in OpenSCAD.  It is under initial development. 
+This is a  Mendel-like RepRap inspired by Vik Olliver's nutless Mendel and Snapdragon, coded in OpenSCAD.  It is under initial development. 
 
 Frame Printed Part List:
-base_strut		4x
-base_vertex		2x
-base_vertex_b	2x
-end_strut		16x
-top_vertex		1x
-top_vertex_b	1x
-y_carriage		2x
-y_idler_strut	1x
-y_motor_strut	1x
-y_rod_strut		4x
-z_idler_mount	1x
-z_idler_strut	1x
-z_motor_mount	1x
-z_motor_strut	1x
-z_rod_mount		2x
-z_rod_top_mount	2x
+base_strut		6x	plate_1 x2
+base_vertex		2x	plate_2 x1
+base_vertex_b	2x	plate_3	x1
+end_strut		16x	plate_4 x5, plate_6 x1
+top_vertex		1x	plate_5 x1
+top_vertex_b	1x	plate_5 x1
+y_carriage		2x	y_carriage.scad x2
+y_idler_strut	1x	plate_6	x1
+y_motor_strut	1x	plate_7 x1
+y_rod_strut		4x	plate_9	x1, plate_8 x1
+z_idler_mount	1x	plate_8 x1
+z_idler_strut	1x	plate_6	x1
+z_motor_mount	1x	plate_7 x1
+z_motor_strut	1x	plate_8 x1
+z_rod_mount		2x	plate_2 x1
+z_rod_top_mount	2x	plate_3	x1

@@ -12,6 +12,8 @@ module base_vertex(){
 			//main body
 			translate([0,0, es_height/2])
 				cylinder(r = bv_radius, h = es_height, center = true);
+			translate([-bs_outset + 1.5 * bs_height + 3, -bv_radius-0.5, -0.5]) 
+				cube([bv_radius+1, 2*bv_radius+1, es_height+1]);
 			// end strut flats and female dovetails
 			translate([-es_length - (sqrt(pow(bv_radius,2) - pow(es_width/2,2))),- es_width/2, -0.01])
 				es_dummy();
