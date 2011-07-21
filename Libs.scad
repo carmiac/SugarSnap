@@ -147,7 +147,7 @@ module slot(size=[4,10,1], startRound=true, endRound=true, centerXYZ=[1,0,0]){
 	
 }	}
 
-module dovetail (width=9, height=10, male=true, fit = 0.900){
+module dovetail (width=9, height=10, male=true, fit = 0.875){
 	w= (male==true) ? width*fit : width;
 	translate(slide(2.4)) union(){
 		rotate(tighten(30))

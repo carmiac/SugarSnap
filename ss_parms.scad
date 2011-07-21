@@ -20,17 +20,21 @@
 
 include <mcad/units.scad>
 
-/*** Primary Configuration ***/
+/*** Tolerence Configuration ***/
+rod_tol = 0.15; // tolerance added to rod holes for shrinkage
+slot_tolerence = 0.45; // tolerence for slot connectors
+
+/*** Primary Size Configuration ***/
 rod_diameter = 8; // outer diamter of the smooth rods
 y_rod_length = 325; // length of the y smooth rods, determines size of frame triangle
 x_length = 325; // inner x width of the frame
-rod_tol = 0.15; // tolerance added to rod holes for shrinkage
-slot_tolerence = 0.45; // tolerence for slot connectors
-idler_pulley_radius = 15; // outer radius, including flange of the idler pulleys
-bearing_tol = rod_tol; // tolerence added to bearing pockets for shrinkage
+
+/*** Misc General Configuration ***/
 bv_radius = 32; // radius of the base vertices
 strut_thick = 7; // thickness of the frame struts
 strut_width = 30; // width of the frame struts
+idler_pulley_radius = 15; // outer radius, including flange of the idler pulleys
+bearing_tol = rod_tol; // tolerence added to bearing pockets for shrinkage
 rod_wall = 3;
 rod_mount_length = 15;
 
