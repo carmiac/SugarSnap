@@ -1,6 +1,6 @@
 use <end_strut.scad>
 
-preview = true;
+preview = false;
 
 translate([-43, 18, 0])
 	end_strut();

@@ -28,7 +28,7 @@ module rod_test(tol = 0.5){
 		// base strut mounting tests
 		for ( i = [1 : 4 ]) {
 			translate([ -5 + i * (ys_rod_diameter + 2 *ys_rod_wall + 3), (ys_rod_diameter + ys_rod_wall + 6)/2, ys_rod_length/2 + 2.99]) 
-					rod_mount(tol = 0.15 * (i+1));
+					rod_mount(tol = 0.15 * (i));
 		}
 	}
 }
