@@ -16,7 +16,7 @@ module y_idler_strut(){
 			cube(size=[ym_length, ym_width, ym_height]);
 			// idler mount 
 			translate([ym_length/2 + y_belt_outset - 2 - ym_mount_width, 0, ym_height - 0.01])
-				cube(size=[yi_width, ym_width, idler_pulley_radius + 25]);
+				cube(size=[yi_width, ym_width, idler_pulley_radius + 15]);
 		}
 		// dovetails
 		translate([ym_length, 6.75, ym_height/2]) mirror([1,0,0]) dovetail(male = false, height = 1.1* ym_height);
@@ -25,7 +25,7 @@ module y_idler_strut(){
 		translate([0, 6.75, ym_height/2]) dovetail(male = false, height = 1.1* ym_height);
 		// idler hole
 		translate([ym_length/2 + y_belt_outset +0.5- ym_mount_width/2, ym_width/2 , ym_height + idler_pulley_radius + 5])
-			teardrop(radius=8,  length = yi_width + 1, angle=90);	
+			teardrop(radius=4,  length = yi_width + 1, angle=90);	
 	}
 } 
 

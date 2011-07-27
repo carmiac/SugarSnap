@@ -1,8 +1,8 @@
 use <y_motor_strut.scad>
 use	<z_motor_mount.scad>
-preview = true;
+preview = false;
 
-translate([-48, 12, 0])
+translate([-48, 10.75, 0])
 	y_motor_strut();
 translate([42, -5, 0])
 	rotate([0,0,180])

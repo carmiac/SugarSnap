@@ -3,13 +3,13 @@ use <z_rod_mount.scad>
 
 preview = false;
 
-translate([-17, 18, 0])
-	base_vertex();
-translate([32, -18, 0])
-	base_vertex();
-translate([15,30,0])	 
+translate([-28, 8, 0])
+	base_vertex_b();
+translate([30, -15, 0])
+	base_vertex_a();
+translate([10,25,0])	 
 	z_rod_mount();
-translate([-45,-35,0])	 
+translate([-40,-40,0])	 
 	z_rod_mount();	
 
 

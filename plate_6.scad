@@ -2,13 +2,13 @@ use <y_idler_strut.scad>
 use <end_strut.scad>
 use <z_idler_strut.scad>
 
-preview = true;
+preview = false;
 
-translate([-43, 18, 0])
+translate([-43, 16.5, 0])
 	z_idler_strut();
 translate([-43, -14.5, 0])
 	y_idler_strut();
-translate([-43, -47, 0])
+translate([-43, -45.5, 0])
 	end_strut();
 
 if (preview) 

@@ -4,8 +4,10 @@ This is a Mendel-like RepRap inspired by Vik Olliver's nutless Mendel and Snapdr
 
 Frame Printed Part List:
 base_strut		6x	plate_1 x2 
-base_vertex		2x	plate_2 x1
-base_vertex_b	2x	plate_3	x1
+base_vertex_a	1x	plate_2 x1
+base_vertex_b	1x	plate_2	x1
+base_vertex_c	1x	plate_3 x1
+base_vertex_d	1x	plate_3	x1
 end_strut		16x	plate_4 x5, plate_6 x1
 top_vertex		1x	plate_5 x1
 top_vertex_b	1x	plate_5 x1

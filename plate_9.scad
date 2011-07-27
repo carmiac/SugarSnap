@@ -1,10 +1,10 @@
 use <y_rod_strut.scad>
 
-preview = true;
+preview = false;
 
-translate([-35, 18, 0])
+translate([-34, 10, 0])
 	y_rod_strut();
-translate([2, -15, 0])
+translate([2, -9, 0])
 	rotate([0,0,180])
 		y_rod_strut();
 translate([18, 20,0])

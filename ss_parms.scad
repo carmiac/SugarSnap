@@ -21,7 +21,7 @@
 include <mcad/units.scad>
 
 /*** Tolerence Configuration ***/
-rod_tol = 0.15; // tolerance added to rod holes for shrinkage
+rod_tol = 0.37; // tolerance added to rod holes for shrinkage
 slot_tolerence = 0.45; // tolerence for slot connectors
 
 /*** Primary Size Configuration ***/

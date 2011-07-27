@@ -18,11 +18,11 @@ module z_idler_strut(){
 		translate([es_length/2 - 10 + (z_bearing_diameter/2 + z_pocket_wall) - slot_tolerence/2, z_mount_lift, -0.5])
 				cube(size = [10 + slot_tolerence, z_mount_thick + slot_tolerence, es_height + 1]);
 		// smoth rod mount dovetails
-		translate([es_length/2 - (z_rod_mount_width/2) + 6.75, es_width, es_height/2])
-			rotate([0,0,-90])
+		translate([es_length/2 - (z_rod_mount_width/2) + 6.75, es_width - es_height/2, 0])
+			rotate([0,-90,-90])
 				dovetail(male = false, height = 1.1* es_height);
-		translate([es_length/2 + (z_rod_mount_width/2) - 6.75, es_width, es_height/2])
-			rotate([0,0,-90])
+		translate([es_length/2 + (z_rod_mount_width/2) - 6.75, es_width - es_height/2, 0])
+			rotate([0,-90,-90])
 				dovetail(male = false, height = 1.1* es_height);
 	}
 }
