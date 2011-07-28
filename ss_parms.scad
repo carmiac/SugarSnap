@@ -26,6 +26,7 @@ slot_tolerence = 0.45; // tolerence for slot connectors
 
 /*** Primary Size Configuration ***/
 rod_diameter = 8; // outer diamter of the smooth rods
+threaded_rod_diameter = 8; // outer diameter of the threaded (Z drive) rods
 y_rod_length = 325; // length of the y smooth rods, determines size of frame triangle
 x_length = 325; // inner x width of the frame
 
@@ -37,6 +38,9 @@ idler_pulley_radius = 15; // outer radius, including flange of the idler pulleys
 bearing_tol = rod_tol; // tolerence added to bearing pockets for shrinkage
 rod_wall = 3;
 rod_mount_length = 15;
+x_rod_distance = 50; // distance between the X axis rails.  50 is from the Prusa Mendel
+z_nut_diameter = 15.01 + rod_tol; //15.01 = M8 nut
+z_nut_height = 6.8; // 6.8 = M8 nut
 
 /*** End Struts ***/
 es_length = (y_rod_length - 2 * bv_radius) / 3 ; // strut body length
@@ -120,6 +124,16 @@ z_mount_lift = 10; // bottom of the z mounts above the bottom of the end stuts
 /*** Z smooth rod mounts ***/
 z_rod_mount_width = 30;
 z_rod_mount_thick = 5;
+z_rod_separation = (rod_diameter + 2*(rod_wall +rod_tol)) / 2 + es_height + z_pocket_wall + z_bearing_diameter/2; //smooth rod mount + end strut + bearing pocket wall + bearing
+
+/*** X Axis Carriage Base ***/
+x_base_width = x_rod_distance + rod_diameter + 6; // 3mm wall on each side of the rods
+x_base_thickness = rod_diameter + 8; // 3mm wall on top and bottom
+x_base_length = z_rod_separation + rod_diameter; //
+x_nut_carrier_height = 50;
+x_slide_height = 70;
+x_slide_width = 17; // width of slider bushings or bearing mounts
+
 
 /*** Top Vertex ***/
 ts_lift = 0;
